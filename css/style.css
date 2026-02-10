@@ -9703,3 +9703,52 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+.logout-btn{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  border-radius: 999px;
+  backdrop-filter: blur(12px);
+
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+/* 🌞 LIGHT MODE */
+@media (prefers-color-scheme: light) {
+  .logout-btn{
+    background: rgba(0, 0, 0, 0.08);
+    color: #111;
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+
+  .logout-btn:hover{
+    background: rgba(239, 68, 68, 0.9);
+    color: #fff;
+    transform: translateY(-2px);
+  }
+}
+
+/* 🌙 DARK MODE */
+@media (prefers-color-scheme: dark) {
+  .logout-btn{
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  }
+
+  .logout-btn:hover{
+    background: rgba(239, 68, 68, 0.95);
+    color: #fff;
+    transform: translateY(-2px);
+  }
+}
+
