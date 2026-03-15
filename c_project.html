@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>C Programming Projects | AMIT RANJAN</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Custom styles for C project page */
+        .c-hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(45deg, #000, #111);
+            text-align: center;
+        }
+        
+        .c-hero h1 {
+            font-size: 48px;
+            color: #fff;
+        }
+        
+        .c-hero h1 span {
+            color: #ffbd39;
+        }
+        
+        .c-hero p {
+            color: #ccc;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+        
+        .projects-section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            color: #ffbd39;
+            font-size: 36px;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Sirf 2 columns */
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .project-card {
+            background: #111;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+            border: 1px solid #333;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: #ffbd39;
+            box-shadow: 0 10px 30px rgba(255, 189, 57, 0.2);
+        }
+        
+        .project-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+        
+        .project-card:hover .project-img img {
+            transform: scale(1.1);
+        }
+        
+        .project-content {
+            padding: 25px;
+        }
+        
+        .project-content h3 {
+            color: #ffbd39;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+        
+        .project-content p {
+            color: #ccc;
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .tech-tag {
+            background: #222;
+            color: #ffbd39;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            border: 1px solid #333;
+        }
+        
+        .btn-custom {
+            display: inline-block;
+            padding: 10px 25px;
+            background: #ffbd39;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-custom:hover {
+            background: #e6a800;
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline-custom {
+            background: transparent;
+            border: 2px solid #ffbd39;
+            color: #ffbd39;
+            margin-left: 10px;
+        }
+        
+        .btn-outline-custom:hover {
+            background: #ffbd39;
+            color: #000;
+        }
+        
+        .certificate-section {
+            padding: 60px 0;
+            background: #111;
+        }
+        
+        .certificate-box {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            background: #000;
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #333;
+        }
+        
+        .certificate-content {
+            flex: 1;
+        }
+        
+        .certificate-content h3 {
+            color: #ffbd39;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        .certificate-content p {
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+        
+        .certificate-content ul {
+            color: #ccc;
+            list-style: none;
+            padding: 0;
+        }
+        
+        .certificate-content ul li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .certificate-content ul li:before {
+            content: "✓";
+            color: #ffbd39;
+            position: absolute;
+            left: 0;
+        }
+        
+        .certificate-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .certificate-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            border: 3px solid #ffbd39;
+            box-shadow: 0 0 30px rgba(255, 189, 57, 0.3);
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr; /* Mobile par ek column */
+                padding: 0 20px;
+            }
+            
+            .certificate-box {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+            }
+            
+            .c-hero h1 {
+                font-size: 32px;
+            }
+            
+            .certificate-content ul li {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start -->
+    <section class="c-hero">
+        <div class="container">
+            <h1>C Programming <span>Projects</span></h1>
+            <p>Explore my C language projects including system programming, data structures, and algorithms.</p>
+            <a href="#projects" class="btn btn-primary py-3 px-4">View Projects</a>
+            <a href="#certificate" class="btn btn-white btn-outline-white py-3 px-4">Certificate</a>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Projects Section Start - Sirf 2 Projects -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>My C Projects</h2>
+                <p>Hands-on projects built using C programming language</p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 - Student Management System -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/c-project1.jpg" alt="Student Management System" onerror="this.src='https://via.placeholder.com/400x200/333/ffbd39?text=Student+Management'">
+                    </div>
+                    <div class="project-content">
+                        <h3>Student Management System</h3>
+                        <p>Complete system to manage student records with file handling. Features include add, delete, update, search, and display student information with automatic grade calculation.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">File Handling</span>
+                            <span class="tech-tag">Structures</span>
+                            <span class="tech-tag">Dynamic Memory</span>
+                        </div>
+                        <a href="project1.html" class="btn-custom">View Details</a>
+                        <a href="#" class="btn-custom btn-outline-custom">Code</a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 - Library Management System -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/c-project2.jpg" alt="Library Management" onerror="this.src='https://via.placeholder.com/400x200/333/ffbd39?text=Library+Management'">
+                    </div>
+                    <div class="project-content">
+                        <h3>Library Management System</h3>
+                        <p>Digital library system with book issuance, return tracking, fine calculation, and member management. Uses data structures for efficient book searching.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">Data Structures</span>
+                            <span class="tech-tag">File I/O</span>
+                            <span class="tech-tag">Linked List</span>
+                        </div>
+                        <a href="project2.html" class="btn-custom">View Details</a>
+                        <a href="#" class="btn-custom btn-outline-custom">Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section End -->
+
+    <!-- Certificate Section Start - Text Left, Image Right -->
+    <section class="certificate-section" id="certificate">
+        <div class="container">
+            <div class="certificate-box">
+                <div class="certificate-content">
+                    <h3>C Programming Certificate</h3>
+                    <p>I have successfully completed certified training in C Programming from recognized institutions. This certificate validates my proficiency in:</p>
+                    <ul>
+                        <li>C Fundamentals & Syntax</li>
+                        <li>Pointers & Memory Management</li>
+                        <li>File Handling</li>
+                        <li>Data Structures in C</li>
+                        <li>Dynamic Memory Allocation</li>
+                    </ul>
+                    <a href="#" class="btn-custom" style="margin-top: 20px;">Verify Certificate</a>
+                </div>
+                <div class="certificate-image">
+                    <img src="images/certificate.jpg" alt="C Certificate" onerror="this.src='https://via.placeholder.com/400x300/333/ffbd39?text=C+Certificate+2024'">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Certificate Section End -->
+
+    <!-- Footer Start -->
+    <footer class="ftco-footer ftco-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | AMIT RANJAN - C Programming Projects</p>
+                    <p><a href="../index.html" style="color: #ffbd39;">Back to Main Portfolio</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Loader -->
+    <div id="ftco-loader" class="show fullscreen">
+        <svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
+        </svg>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
